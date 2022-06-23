@@ -8,4 +8,6 @@
     <img title="cppLogo" src="./website/static/img/cppLogo.png" alt="cppLogo" data-align="center" width="183">
 </p>
 
+<img alt="GitHub" src="https://img.shields.io/github/license/pkyo/LeetCode-CPP?label=license">
+
 
