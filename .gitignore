@@ -3,3 +3,4 @@ node_modules/
 _book/
 .idea
 code/cmake-build-debug/
+cmake-build-debug/
