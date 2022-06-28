@@ -258,7 +258,47 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="description">Description</h1>
+<p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>
+<p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>
+<h1 id="example">Example</h1>
+<pre><code class="lang-shell">Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+</code></pre>
+<h1 id="problem-solving">Problem-Solving</h1>
+<h1 id="code">Code</h1>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">climbStairs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
+        }
+
+        <span class="hljs-keyword">int</span> p = <span class="hljs-number">1</span>, q = <span class="hljs-number">2</span>, r = <span class="hljs-number">0</span>;
+        <span class="hljs-comment">// f(x) = f(x-1) + f(x-2)</span>
+        <span class="hljs-comment">// f(1) = p = 1</span>
+        <span class="hljs-comment">// f(2) = q = 2</span>
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">3</span>; i &lt;= n; ++i) {
+            r = p + q;
+
+            p = q;
+            q = r;
+        }
+
+        <span class="hljs-keyword">return</span> r;
+    }
+};
+</code></pre>
+<h1 id="hacking-cpp">Hacking CPP</h1>
+
                                 
                                 </section>
                             
@@ -297,7 +337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"70 climbing stairs","level":"1.2.1.2","depth":3,"next":{"title":"100~199","level":"1.2.2","depth":2,"ref":"","articles":[]},"previous":{"title":"11 container with most water","level":"1.2.1.1","depth":3,"path":"solutions/11containerWithMostWater.md","ref":"./solutions/11containerWithMostWater.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-chapters","-sharing","copy-code-button"],"pluginsConfig":{"folding-chapters":{},"copy-code-button":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"solutions/70climbingStairs.md","mtime":"2022-06-23T11:01:37.610Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-27T15:02:26.373Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"70 climbing stairs","level":"1.2.1.2","depth":3,"next":{"title":"100~199","level":"1.2.2","depth":2,"ref":"","articles":[]},"previous":{"title":"11 container with most water","level":"1.2.1.1","depth":3,"path":"solutions/11containerWithMostWater.md","ref":"./solutions/11containerWithMostWater.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["folding-chapters","-sharing","copy-code-button"],"pluginsConfig":{"folding-chapters":{},"copy-code-button":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"solutions/70climbingStairs.md","mtime":"2022-06-28T04:45:44.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-28T04:46:06.117Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

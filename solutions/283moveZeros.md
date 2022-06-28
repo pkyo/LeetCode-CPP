@@ -14,7 +14,7 @@ Input: nums = [0]
 Output: [0]
 ```
 
-# Problem Solving
+# Problem-Solving
 
 # Code
 
@@ -41,3 +41,5 @@ public:
     }
 };
 ```
+
+# Hacking CPP
